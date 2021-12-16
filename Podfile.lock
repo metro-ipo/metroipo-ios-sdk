@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (5.5.0)
+  - MetroIpoSdk (0.0.2):
+    - Alamofire (~> 5.4)
+
+DEPENDENCIES:
+  - MetroIpoSdk (from `~/Documents/Projects/metrosdk/sdk/ios/sdk/metroipo-ios/build`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  MetroIpoSdk:
+    :path: "~/Documents/Projects/metrosdk/sdk/ios/sdk/metroipo-ios/build"
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  MetroIpoSdk: 6bedf547a21222e4556ca337e47f585cbedadf42
+
+PODFILE CHECKSUM: 1ee37f376453a7264ae842a04c93992de8e54506
+
+COCOAPODS: 1.11.2
