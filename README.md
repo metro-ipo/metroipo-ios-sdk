@@ -88,7 +88,6 @@ To ensure that Metro Ipo fits in to your app's existing user experience, you can
 ```swift
 let appearance = Theme(
     colorPrimary: <UIColor>,
-    colorTextPrimary: <UIColor>,
     colorButtonPrimary: <UIColor>,
     colorButtonPrimaryText: <UIColor>,
     colorButtonPrimaryPressed: <UIColor>,
