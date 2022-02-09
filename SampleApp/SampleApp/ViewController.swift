@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     do {
       let config = MetroIpoConfig()
         .setCode(code: verificationCode)
-        .setDomain(url: "https://admin.metroipo.com")
+        .setDomain(url: "YOUR-METROIPO-SERVER")
         .build()
       var presentationStyle: UIModalPresentationStyle = .fullScreen
       
