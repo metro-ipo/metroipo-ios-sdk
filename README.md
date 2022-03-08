@@ -28,7 +28,7 @@ The Metro IPO SDK uses a **verification code** that you can obtain from your ipo
 ```swift
 import MetroIpoSdk
 
-let config = MetroIpoConfig().setDomain(url: "YOUR-METROIPO-SERVER").build()
+let config = MetroIpoConfig().setDomain(url: "YOUR-METROIPO-SERVER").build() // Domain/Hostname should be added without "https://" or trailing slash e.g metroipo.com
 do {
     let sdk = try MetroIpo(configuration: config)
 
