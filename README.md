@@ -28,7 +28,7 @@ The Metro IPO SDK uses a **verification code** that you can obtain from your ipo
 ```swift
 import MetroIpoSdk
 
-let config = MetroIpoConfig().setCode(code: "verification-code").setDomain(url: "YOUR-METROIPO-SERVER").build()
+let config = MetroIpoConfig().setDomain(url: "YOUR-METROIPO-SERVER").build()
 do {
     let sdk = try MetroIpo(configuration: config)
 
@@ -38,7 +38,7 @@ do {
         presentationStyle = .formSheet
     }
     
-    try sdk.start(origin: self, style: presentationStyle)
+    try sdk.start(code: "VERIFICATION-CODE", origin: self, style: presentationStyle)
 } catch let error {
     print("Flow not started. Error: \(error)")
 }

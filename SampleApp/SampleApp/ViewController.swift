@@ -11,28 +11,39 @@ import MetroIpoSdk
 class ViewController: UIViewController {
   @IBOutlet weak var messageLabel: UILabel!
   @IBOutlet weak var codeTextField: UITextField!
+  var metroSdk: MetroIpo?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     messageLabel.text = "To add your signature, please enter your verification code. To upload your signature, after signing on the next screen, press the NEXT button."
+    
+    do {
+      let config = MetroIpoConfig()
+        .setDomain(url: "YOUR-METROIPO-SERVER")
+        .build()
+      metroSdk = try MetroIpo(configuration: config)
+    } catch let error {
+      print("Flow not started. Error: \(error)")
+    }
   }
   
   @IBAction func onSubmitPress(_ sender: Any) {
     guard let verificationCode = codeTextField.text else {
-        return
+      return
     }
     do {
-      let config = MetroIpoConfig()
-        .setCode(code: verificationCode)
-        .setDomain(url: "YOUR-METROIPO-SERVER")
-        .build()
+      
       var presentationStyle: UIModalPresentationStyle = .fullScreen
       
       if UIDevice.current.userInterfaceIdiom == .pad {
         presentationStyle = .formSheet
       }
-      let sdk = try MetroIpo(configuration: config)
-      try sdk.start(origin: self, style: presentationStyle)
+      
+      guard let sdk = metroSdk else {
+        return
+      }
+      
+      try sdk.start(code: verificationCode, origin: self, style: presentationStyle)
       sdk.with(responseHandler: {response in
         switch response {
         case .success(let result):

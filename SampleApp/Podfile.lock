@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.5.0)
-  - MetroIpoSdk (0.0.2):
+  - MetroIpoSdk (0.0.4):
     - Alamofire (~> 5.4)
 
 DEPENDENCIES:
@@ -13,7 +13,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  MetroIpoSdk: 13e899657f53cf5e0cae198589f0c441043d2b17
+  MetroIpoSdk: cc43920837831fa40de24ead414edd24504613bb
 
 PODFILE CHECKSUM: a9702e01d9ad119af023e455d5268e0cb0416935
 
