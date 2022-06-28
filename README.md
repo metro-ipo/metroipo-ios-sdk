@@ -91,6 +91,10 @@ let appearance = Theme(
     colorButtonPrimary: <UIColor>,
     colorButtonPrimaryText: <UIColor>,
     colorButtonPrimaryPressed: <UIColor>,
+    imageNavCenterLogo: <UIImage>,
+    imageNavBackground: <UIImage>,
+    imageBottomLogo: <UIImage>,
+    buttonBorderRadius: <CGFloat>,
     enableDarkMode: <true | false>)
 
 let config = MetroIpoConfig().setAppearance(appearance).build()
@@ -100,6 +104,10 @@ let config = MetroIpoConfig().setAppearance(appearance).build()
 ```colorButtonPrimary```: Defines the background color of Primary Buttons and the text color of Secondary Buttons.\
 ```colorButtonPrimaryText```: Defines the text color of Primary Buttons.\
 ```colorButtonPrimaryPressed```: Defines the background color of Primary Buttons when pressed.\
+```imageNavCenterLogo```: Defines a center image of the signature page navigation bar.\
+```imageNavBackground```: Defines the background image of the signature page navigation bar.\
+```imageBottomLogo```: Defines the bottom logo image of the signature page.\
+```buttonBorderRadius```: Defines the border radius of buttons.\
 ```enableDarkMode```: Defines the dark mode allowed setting for the SDK.
 
 ## Sample App
