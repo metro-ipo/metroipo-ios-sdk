@@ -88,6 +88,7 @@ To ensure that Metro Ipo fits in to your app's existing user experience, you can
 ```swift
 let appearance = Theme(
     colorPrimary: <UIColor>,
+    colorTextPrimary: <UIColor>,
     colorButtonPrimary: <UIColor>,
     colorButtonPrimaryText: <UIColor>,
     colorButtonPrimaryPressed: <UIColor>,
@@ -100,7 +101,8 @@ let appearance = Theme(
 let config = MetroIpoConfig().setAppearance(appearance).build()
 ```
 
-```colorPrimary```: Defines the primary accent color including the back button.\
+```colorPrimary```: Defines the primary accent color.\
+```colorTextPrimary```: Defines the color of the nav title text and back button.\
 ```colorButtonPrimary```: Defines the background color of Primary Buttons and the text color of Secondary Buttons.\
 ```colorButtonPrimaryText```: Defines the text color of Primary Buttons.\
 ```colorButtonPrimaryPressed```: Defines the background color of Primary Buttons when pressed.\
